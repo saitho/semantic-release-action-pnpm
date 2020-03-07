@@ -1,5 +1,4 @@
-name: Release
-
+name: Build
 on:
   pull_request:
     branches:
@@ -7,22 +6,51 @@ on:
   push:
     branches:
       - master
-
 jobs:
-  release:
-    name: release
+  build:
+    name: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node
+
+      - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: 12
+
       - name: Install
         run: npm i -g pnpm && pnpm i
+
       - name: Build
         run: pnpm run build
+
+      - name: Upload build output
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: dist
+  release:
+    name: release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Download build output
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Install
+        run: npm i -g pnpm && pnpm i -P
+
       - name: Semantic Release
         uses: ./
         with:
