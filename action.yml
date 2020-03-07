@@ -11,20 +11,21 @@ inputs:
       If the attribute is not configured on both sides, the default is master.
     required: false
   semantic_version:
-    description: Specify specifying version range for semantic-release.
+    description: The version range for semantic-release.
     required: false
     default: '17'
   extra_plugins:
-    description:
-      Extra plugins for pre-install. You can also specify specifying version range for the extra plugins if you prefer.
+    description: >-
+      Extra plugins that are not included in the semantic-release defaults, separated by new lines. You can also specify
+      the version range.
     required: false
   dry_run:
-    description: >-
-      Whether to run semantic release in `dry-run` mode. It will override the dryRun attribute in your configuration file.
+    description:
+      Whether to run semantic release in `dry-run` mode. It will override the `dryRun` attribute in your configuration file.
     required: false
 outputs:
   new_release_published:
-    description: Whether a new release was published.
+    description: Whether a new release was published (`true` or `false`).
   new_release_version:
     description: Version of the new release.
   new_release_major_version:

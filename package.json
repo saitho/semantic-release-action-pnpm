@@ -1,5 +1,5 @@
 {
-  "name": "@cherryblossom000/semantic-release-action-pnpm",
+  "name": "semantic-release-action-pnpm",
   "version": "1.0.0",
   "private": true,
   "publishConfig": {
