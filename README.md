@@ -82,3 +82,6 @@ steps:
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 ```
+
+## License
+[MIT](LICENSE) © 2020 cherryblossom000 and 2019 cycjimmy
