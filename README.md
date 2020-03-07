@@ -1,5 +1,5 @@
 # semantic-release action using pnpm
-[![Build status](https://github.com/cherryblossom000/semantic-release-action-pnpm/workflows/Build/badge.svg)](https://github.com/cherryblossom000/semantic-release-action-pnpm/actions)[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Build status](https://github.com/cherryblossom000/semantic-release-action-pnpm/workflows/Build/badge.svg)](https://github.com/cherryblossom000/semantic-release-action-pnpm/actions) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 GitHub Action for [semantic-release](https://github.com/semantic-release/semantic-release) using [pnpm](https://github.com/pnpm/pnpm). Forked from [the original](https://github.com/cycjimmy/semantic-release-action).
 
@@ -41,7 +41,7 @@ steps:
 ```
 
 #### Passing extra plugins with `extra_plugins`
-The action can be used with `extra_plugins` option to specify plugins which are not in the [default list of plugins of semantic release](https://semantic-release.gitbook.io/semantic-release/usage/plugins#default-plugins). When using this option, please make sure that these plugins are also mentioned in your [semantic release config’s plugins](https://semantic-release.gitbook.io/semantic-release/usage/configuration#plugins) array. For example, if you want to use `@semantic-release/git` and `@semantic-release/changelog` extra plugins, these must be added to `extra_plugins` in your actions file and `plugins` in your [release config file](https://semantic-release.gitbook.io/semantic-release/usage/configuration#configuration-file) as shown bellow:
+The action can be used with `extra_plugins` option to specify plugins which are not in the [default list of plugins of semantic release](https://semantic-release.gitbook.io/semantic-release/usage/plugins#default-plugins). When using this option, please make sure that these plugins are also mentioned in your [semantic release configâ€™s plugins](https://semantic-release.gitbook.io/semantic-release/usage/configuration#plugins) array. For example, if you want to use `@semantic-release/git` and `@semantic-release/changelog` extra plugins, these must be added to `extra_plugins` in your actions file and `plugins` in your [release config file](https://semantic-release.gitbook.io/semantic-release/usage/configuration#configuration-file) as shown bellow:
 
 ```yaml
 steps:
@@ -84,4 +84,4 @@ steps:
 ```
 
 ## License
-[MIT](LICENSE) � 2020 cherryblossom000 and 2019 cycjimmy
+[MIT](LICENSE) © 2020 cherryblossom000 and 2019 cycjimmy
