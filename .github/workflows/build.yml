@@ -1,11 +1,5 @@
 name: Build
-on:
-  pull_request:
-    branches:
-      - master
-  push:
-    branches:
-      - master
+on: [pull_request, push]
 jobs:
   build:
     name: build
@@ -27,12 +21,14 @@ jobs:
 
       - name: Upload build output
         uses: actions/upload-artifact@v1
+        if: github.ref == 'refs/heads/master'
         with:
           name: dist
           path: dist
   release:
     name: release
     needs: build
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
