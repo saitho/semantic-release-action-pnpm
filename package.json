@@ -21,9 +21,7 @@
     "type": "git",
     "url": "https://github.com/cherryblossom000/semantic-release-action-pnpm"
   },
-  "bugs": {
-    "url": "https://github.com/cherryblossom000/semantic-release-action-pnpm/issues"
-  },
+  "bugs": "https://github.com/cherryblossom000/semantic-release-action-pnpm/issues",
   "main": "dist/index.js",
   "engines": {
     "node": ">=12"
