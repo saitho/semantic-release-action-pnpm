@@ -3,7 +3,7 @@
     "@semantic-release/changelog",
     "@semantic-release/npm",
     ["@semantic-release/git", {
-      "assets": ["package.json", "CHANGELOG.md"]
+      "assets": ["package.json", "CHANGELOG.md", "dist"]
     }],
     "@semantic-release/github",
     "@semantic-release/release-notes-generator"

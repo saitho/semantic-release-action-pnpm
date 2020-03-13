@@ -1,5 +1,7 @@
 dependencies:
   '@actions/core': 1.2.3
+  '@semantic-release/changelog': 5.0.0_semantic-release@17.0.4
+  '@semantic-release/git': 9.0.0_semantic-release@17.0.4
   semantic-release: 17.0.4_semantic-release@17.0.4
 devDependencies:
   '@types/node': 13.9.0
@@ -178,6 +180,20 @@ packages:
     dev: false
     resolution:
       integrity: sha512-rvJP1Y9A/+Cky2C3var1vsw3Lf5Rjn/0sojNl2AjCX+WbpIHYccaJ46abrZoIxMYnOToul6S9tPytUVkFI7CXQ==
+  /@semantic-release/changelog/5.0.0_semantic-release@17.0.4:
+    dependencies:
+      '@semantic-release/error': 2.2.0
+      aggregate-error: 3.0.1
+      fs-extra: 8.1.0
+      lodash: 4.17.15
+      semantic-release: 17.0.4_semantic-release@17.0.4
+    dev: false
+    engines:
+      node: '>=10.18'
+    peerDependencies:
+      semantic-release: '>=15.8.0 <18.0.0'
+    resolution:
+      integrity: sha512-A1uKqWtQG4WX9Vh4QI5b2ddhqx1qAJFlbow8szSNiXn+TaJg15LSUA9NVqyu0VxQFy3hKUJYwbBHGRXCxCy2fg==
   /@semantic-release/commit-analyzer/8.0.1_semantic-release@17.0.4:
     dependencies:
       conventional-changelog-angular: 5.0.6
@@ -199,6 +215,24 @@ packages:
     dev: false
     resolution:
       integrity: sha512-9Tj/qn+y2j+sjCI3Jd+qseGtHjOAeg7dU2/lVcqIQ9TV3QDaDXDYXcoOHU+7o2Hwh8L8ymL4gfuO7KxDs3q2zg==
+  /@semantic-release/git/9.0.0_semantic-release@17.0.4:
+    dependencies:
+      '@semantic-release/error': 2.2.0
+      aggregate-error: 3.0.1
+      debug: 4.1.1
+      dir-glob: 3.0.1
+      execa: 4.0.0
+      lodash: 4.17.15
+      micromatch: 4.0.2
+      p-reduce: 2.1.0
+      semantic-release: 17.0.4_semantic-release@17.0.4
+    dev: false
+    engines:
+      node: '>=10.18'
+    peerDependencies:
+      semantic-release: '>=16.0.0 <18.0.0'
+    resolution:
+      integrity: sha512-AZ4Zha5NAPAciIJH3ipzw/WU9qLAn8ENaoVAhD6srRPxTpTzuV3NhNh14rcAo8Paj9dO+5u4rTKcpetOBluYVw==
   /@semantic-release/github/7.0.4_semantic-release@17.0.4:
     dependencies:
       '@octokit/rest': 17.0.0
@@ -4084,6 +4118,8 @@ packages:
       integrity: sha512-T39FNN1b6hCW4SOIk1XyTOWxtXdcen0t+XYrysQmChzSipvhBO8Bj0nK1ozAasdk24dNWuMZvr4k24nz+8HHLg==
 specifiers:
   '@actions/core': ^1.2.3
+  '@semantic-release/changelog': ^5.0.0
+  '@semantic-release/git': ^9.0.0
   '@types/node': ^13.9.0
   '@types/semantic-release': ^15.13.1
   '@typescript-eslint/eslint-plugin': ^2.22.0
@@ -4091,5 +4127,5 @@ specifiers:
   commitizen: ^4.0.3
   cz-conventional-changelog: ^3.1.0
   eslint: ^6.8.0
-  semantic-release: ^17.0.4
+  semantic-release: '17'
   typescript: ^3.8.3
