@@ -1,5 +1,4 @@
 .DS_Store
 pnpm-debug.log*
 tsconfig.tsbuildinfo
-node_modules/
 **/*.js.map
