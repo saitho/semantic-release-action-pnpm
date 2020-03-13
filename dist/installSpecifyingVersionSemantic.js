@@ -15,4 +15,3 @@ exports.default = async () => {
     core_1.debug(stdout);
     core_1.error(stderr);
 };
-//# sourceMappingURL=installSpecifyingVersionSemantic.js.map

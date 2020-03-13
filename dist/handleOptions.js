@@ -21,4 +21,3 @@ exports.handleDryRunOption = () => {
     const dryRun = core_1.getInput('dry_run');
     return { dryRun: typeof dryRun == 'undefined' ? undefined : dryRun === 'true' };
 };
-//# sourceMappingURL=handleOptions.js.map

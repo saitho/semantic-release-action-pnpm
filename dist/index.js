@@ -14,4 +14,3 @@ const run = async () => {
     main_1.default();
 };
 run().catch(console.error);
-//# sourceMappingURL=index.js.map

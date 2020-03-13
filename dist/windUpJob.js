@@ -21,4 +21,3 @@ exports.default = (result) => {
     core_1.setOutput('new_release_minor_version', minor);
     core_1.setOutput('new_release_patch_version', patch);
 };
-//# sourceMappingURL=windUpJob.js.map

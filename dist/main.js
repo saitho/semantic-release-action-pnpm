@@ -27,4 +27,3 @@ exports.default = () => {
     core_1.debug('Initialization successful');
     release().catch(core_1.setFailed);
 };
-//# sourceMappingURL=main.js.map

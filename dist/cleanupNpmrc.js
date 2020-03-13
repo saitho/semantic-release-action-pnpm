@@ -12,4 +12,3 @@ exports.default = async () => {
     if (stderr)
         return Promise.reject(stderr);
 };
-//# sourceMappingURL=cleanupNpmrc.js.map

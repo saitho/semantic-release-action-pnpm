@@ -9,4 +9,3 @@ exports.default = () => {
     core_1.debug('action_workspace: ' + path_1.join(__dirname, '..'));
     core_1.debug('process.cwd: ' + process.cwd());
 };
-//# sourceMappingURL=setUpJob.js.map
