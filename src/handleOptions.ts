@@ -22,3 +22,9 @@ export const handleDryRunOption = (): {dryRun?: boolean} => {
   const dryRun = getInput('dry_run')
   return {dryRun: typeof dryRun == 'undefined' ? undefined : dryRun === 'true'}
 }
+
+/** Handle debug option. */
+export const handleDebugOption = (): {debug?: boolean} => {
+  const debug = getInput('debug')
+  return {debug: typeof debug == 'undefined' ? undefined : debug === 'true'}
+}
