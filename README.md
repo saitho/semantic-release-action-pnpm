@@ -18,6 +18,7 @@ All inputs are optional.
 | `semantic_version` | The version range for semantic-release. |
 | `extra_plugins`    | Extra plugins that are not included in the [semantic-release defaults](https://semantic-release.gitbook.io/semantic-release/usage/plugins#default-plugins), separated by new lines. You can also specify the version range. |
 | `dry_run`          | Whether to run semantic release in `dry-run` mode (`true` or `false`). It will override the `dryRun` attribute in your configuration file. |
+| `debug`          | Whether to run semantic release in `debug` mode (`true` or `false`). It will override the `debug` attribute in your configuration file. |
 
 ### Outputs
 | Name                        | Description                                              |
