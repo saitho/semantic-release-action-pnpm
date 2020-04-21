@@ -16,6 +16,9 @@ const release = async () => {
     setUpJob_1.default();
     await installSpecifyingVersionSemantic_1.default();
     await preInstallPlugins_1.default();
+    if (handleOptions_1.handleDebugOption().debug) {
+        require('debug').enable('semantic-release:*');
+    }
     const result = await semantic_release_1.default({
         ...handleOptions_1.handleBranchOption(),
         ...handleOptions_1.handleDryRunOption()

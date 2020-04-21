@@ -21,3 +21,8 @@ exports.handleDryRunOption = () => {
     const dryRun = core_1.getInput('dry_run');
     return { dryRun: typeof dryRun == 'undefined' ? undefined : dryRun === 'true' };
 };
+/** Handle debug option. */
+exports.handleDebugOption = () => {
+    const debug = core_1.getInput('debug');
+    return { debug: typeof debug == 'undefined' ? undefined : debug === 'true' };
+};
