@@ -12,11 +12,14 @@ const release = async (): Promise<void> => {
   setUpJob()
   await installSpecifyingVersionSemantic()
   await preInstallPlugins()
+  
+  if (handleDebugOption().debug) {
+    require('debug').enable('semantic-release:*');
+  }
 
   const result = await semanticRelease({
     ...handleBranchOption(),
-    ...handleDryRunOption(),
-    ...handleDebugOption()
+    ...handleDryRunOption()
   })
 
   await cleanupNpmrc()
