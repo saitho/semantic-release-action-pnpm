@@ -1,7 +1,7 @@
 import {debug, setFailed} from '@actions/core'
 import semanticRelease from 'semantic-release'
 import cleanupNpmrc from './cleanupNpmrc'
-import {handleBranchOption, handleDryRunOption} from './handleOptions'
+import {handleBranchOption, handleDryRunOption, handleDebugOption} from './handleOptions'
 import installSpecifyingVersionSemantic from './installSpecifyingVersionSemantic'
 import preInstallPlugins from './preInstallPlugins'
 import setUpJob from './setUpJob'
@@ -12,6 +12,10 @@ const release = async (): Promise<void> => {
   setUpJob()
   await installSpecifyingVersionSemantic()
   await preInstallPlugins()
+  
+  if (handleDebugOption().debug) {
+    require('debug').enable('semantic-release:*');
+  }
 
   const result = await semanticRelease({
     ...handleBranchOption(),
